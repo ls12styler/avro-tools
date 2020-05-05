@@ -42,6 +42,14 @@ Available tools:
 trevni_random  Create a Trevni file filled with random instances of a schema.
 trevni_tojson  Dumps a Trevni file as JSON.
 ```
+
+## Working with files
+
+You need to either mount a directory, or a specific file, into the container to be able to perform operations:
+```
+docker run --rm -v /path/to/file.avro:/local/file.avro ls12styler/avro-tools[:version] tojson /local/file.avro
+```
+
 ## Building
 
 To build with the default Apache Avro version (1.9.2), simply run:
